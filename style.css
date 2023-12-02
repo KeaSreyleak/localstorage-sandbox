@@ -1,0 +1,55 @@
+body{
+    background-color: #f5f5f5;
+    /* justify-content: center;
+    display: flex; */
+}
+
+/* Enroll Form  */
+.enroll-form{
+    width: 60%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.card-title{
+    color: #55585C;
+    font-size: 18px;
+    font-weight: 600;
+}
+.card-text{
+    font-size: 17px;
+    color: #65676B;
+}
+i{
+    color: #E0900C;
+    font-size: 15px;
+}
+
+/* Student Registered */
+table, th, td{
+    color: #55585C;
+    border: 1px solid #111111;
+}
+th{
+    text-align: center;
+    background-color: rgb(188, 230, 255);
+    padding: 10px 20px;
+}
+td{
+    padding: 5px 5px;
+}
+.btn-edit{
+    color: #fff;
+    background-color: #E0900C;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0px 5px;
+}
+.btn-delete{
+    color: #fff;
+    background-color: #d5002e;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0px 5px;
+}

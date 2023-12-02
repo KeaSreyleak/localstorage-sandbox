@@ -1,0 +1,24 @@
+<table id="dataTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+  const dataArray = JSON.parse(localStorage.getItem("userData")) || [];
+  const dataTable = document.getElementById("dataTable");
+  const tbody = dataTable.querySelector("tbody");
+
+  for (const userData of dataArray) {
+    const row = tbody.insertRow();
+    const nameCell = row.insertCell();
+    const ageCell = row.insertCell();
+
+    nameCell.textContent = userData.name;
+    ageCell.textContent = userData.age;
+  }
+</script>

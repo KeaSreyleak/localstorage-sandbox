@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VGrow</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="enroll-form m-auto my-5 p-4">
+      <h3 class="text-center">Enroll Form</h3>
+      <form name="f" id="myForm">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          name="myName"
+          id="fullName"
+          class="form-control"
+          placeholder="Enter your full name"
+        />
+        <label for="gender">Gender</label>
+        <select id="myGender" class="form-select" placeholder="Select gender">
+          <option selected>Select gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="myDate" id="date" class="form-control" />
+        <label for="place">Place of Birth</label>
+        <select id="myPlace" class="form-select">
+          <option selected>Select place of birth</option>
+          <option value="Tboung Khmom">Tboung Khmom</option>
+          <option value="Takao">Takao</option>
+          <option value="Kandal">Kandal</option>
+          <option value="Kompong Speu">Kompong Speu</option>
+          <option value="Kompong Chhnang">Kompong Chhnang</option>
+          <option value="Kompong Cham">Kompong Cham</option>
+          <option value="Kompong Thom">Kompong Thom</option>
+          <option value="Koh Kong">Koh Kong</option>
+          <option value="Kep">Kep</option>
+          <option value="Kompot">Kompot</option>
+          <option value="Kratie">Kratie</option>
+          <option value="Modulkiri">Modulkiri</option>
+          <option value="Oddar Meanchey">Oddar Meanchey</option>
+          <option value="Sihanoukville">Sihanoukville</option>
+          <option value="Stung Treng">Stung Treng</option>
+          <option value="Siem Reap">Siem Reap</option>
+          <option value="Svay Rieng">Svay Rieng</option>
+          <option value="Pailin">Pailin</option>
+          <option value="Phnom Penh">Phnom Penh</option>
+          <option value="Prey Veng">Prey Veng</option>
+          <option value="Pursat">Pursat</option>
+          <option value="Ratanakiri">Ratanakiri</option>
+          <option value="Battambong">Battambong</option>
+          <option value="Banteay Meanchey">Banteay Meanchey</option>
+        </select>
+        <label for="address">Current Address</label>
+        <select id="myCurrentAddress" class="form-select">
+          <option selected>Select current address</option>
+          <option value="Tuol Kouk">Tuol Kouk</option>
+          <option value="Sen Sok">Sen Sok</option>
+          <option value="Russey Keo">Russey Keo</option>
+          <option value="Prek Pnov">Prek Pnov</option>
+          <option value="Prampir Makara">Prampir Makara</option>
+          <option value="Pou Senchey">Pou Senchey</option>
+          <option value="Mean Chey">Mean Chey</option>
+          <option value="Komboul">Komboul</option>
+          <option value="Daun Penh">Daun Penh</option>
+          <option value="Dangkao">Dangkao</option>
+          <option value="Chroy Changvar">Chroy Changvar</option>
+          <option value="Chbar Ampov">Chbar Ampov</option>
+          <option value="Chbar Mon">Chbar Mon</option>
+          <option value="Boeng Keng Kong">Boeng Keng Kong</option>
+        </select>
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="myEmail"
+          id="email"
+          class="form-control"
+          placeholder="example@gmail.com"
+        />
+        <label for="phone">Phone Number</label>
+        <input
+          type="text"
+          name="myPhone"
+          id="phone"
+          class="form-control"
+          placeholder="096 --- ---"
+        />
+        <label for="courses">Courses</label>
+        <select id="myCourses" class="form-select">
+          <option selected>Select courses</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Flutter Mobile Development">
+            Flutter Mobile Development
+          </option>
+          <option value="Dot Net Development">Dot Net Development</option>
+          <option value="Java Programming">Java Programming</option>
+          <option value="Spring Framework">Spring Framework</option>
+          <option value="React.js">React.js</option>
+        </select>
+        <input
+          type="button"
+          class="btn btn-success mt-3"
+          value="Submit"
+          onclick="createStudent()"
+        />
+        <br /><br />
+        <p id="disPlayResult"></p>
+      </form>
+      <a class="pt-3 nav-link" href="studentRegisteredData.html"
+        >Student Registered Data</a
+      >
+    </div>
+    <table id="enrollData" class="m-auto mb-5">
+      <thead>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>Place of Birth</th>
+        <th>Current Address</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Courses</th>
+        <th>Action</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script type="text/javascript">
+      const form = document.getElementById("myForm").value;
+      const name = document.getElementById("fullName").value;
+      const gender = document.getElementById("myGender").value;
+      const date = document.getElementById("date").value;
+      const place = document.getElementById("myPlace").value;
+      const address = document.getElementById("myCurrentAddress").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const course = document.getElementById("myCourses").value;
+      const table = document.getElementById("tbody").value;
+
+      let index = 0;
+
+      const students = JSON.parse(localStorage.getItem("students")) || [];
+      const createStudent = () => {
+        index += 1;
+
+        const student = {
+          index: index,
+          name: name,
+          gender: gender,
+          date: date,
+          place: place,
+          address: address,
+          email: email,
+          phone: phone,
+          course: course,
+        };
+
+        students.push(student);
+        localStorage.setItem("students", JSON.stringify(students));
+      };
+
+      function createEnrollStudent() {
+        index += 1;
+        const rows = document.createElement("tr");
+
+        var student = {};
+        rows.innerHTML = `
+          <td>${index}</td>
+          <td>${name.value}</td>
+          <td>${gender.value}</td>
+          <td>${date.value}</td>
+          <td>${place.value}</td>
+          <td>${address.value}</td>
+          <td>${email.value}</td>
+          <td>${phone.value}</td>
+          <td>${course.value}</td>
+          <td>
+            <button class="btn-edit" onClick="editEnrollStudent()">
+              Edit
+            </button>
+            <button class="btn-delete">
+              Delete
+            </button>
+          </td>
+          `;
+        table.appendChild(rows);
+      }
+
+      function clearFieldInput() {
+        form.reset();
+      }
+
+      function editEnrollStudent() {}
+
+      function mySubmit() {
+        createEnrollStudent();
+        clearFieldInput();
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
