@@ -13,7 +13,6 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -35,10 +34,11 @@
           <option value="Male">Male</option>
         </select>
         <label for="date">Date of Birth</label>
-        <input type="date" name="myDate" id="date" class="form-control" />
+        <input type="date" id="date" class="form-control" required />
+
         <label for="place">Place of Birth</label>
         <select id="myPlace" class="form-select">
-          <option selected>Select place of birth</option>
+          <option value="" selected disabled>Select place of birth</option>
           <option value="Tboung Khmom">Tboung Khmom</option>
           <option value="Takao">Takao</option>
           <option value="Kandal">Kandal</option>
@@ -119,76 +119,8 @@
         <br /><br />
         <p id="disPlayResult"></p>
       </form>
-      <a class="pt-3 nav-link" href="studentRegisteredData.html"
-        >Student Registered Data</a
-      >
     </div>
-    <table id="enrollData" class="m-auto mb-5">
-      <thead>
-        <th>ID</th>
-        <th>Full Name</th>
-        <th>Gender</th>
-        <th>Date of Birth</th>
-        <th>Place of Birth</th>
-        <th>Current Address</th>
-        <th>Email</th>
-        <th>Phone Number</th>
-        <th>Courses</th>
-        <th>Action</th>
-      </thead>
-      <tbody id="tbody"></tbody>
-    </table>
-    <script type="text/javascript">
-      const form = document.getElementById("myForm").value;
-      const name = document.getElementById("fullName").value;
-      const gender = document.getElementById("myGender").value;
-      const date = document.getElementById("date").value;
-      const place = document.getElementById("myPlace").value;
-      const address = document.getElementById("myCurrentAddress").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const course = document.getElementById("myCourses").value;
-      const table = document.getElementById("tbody").value;
-
-      let index = 0;
-      function createEnrollStudent() {
-        index += 1;
-        const rows = document.createElement("tr");
-
-        var student = {};
-        rows.innerHTML = `
-          <td>${index}</td>
-          <td>${name.value}</td>
-          <td>${gender.value}</td>
-          <td>${date.value}</td>
-          <td>${place.value}</td>
-          <td>${address.value}</td>
-          <td>${email.value}</td>
-          <td>${phone.value}</td>
-          <td>${course.value}</td>
-          <td>
-            <button class="btn-edit" onClick="editEnrollStudent()">
-              Edit
-            </button>
-            <button class="btn-delete">
-              Delete
-            </button>
-          </td>
-          `;
-        table.appendChild(rows);
-      }
-
-      function clearFieldInput() {
-        form.reset();
-      }
-
-      function editEnrollStudent() {}
-
-      function mySubmit() {
-        createEnrollStudent();
-        clearFieldInput();
-      }
-    </script>
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
