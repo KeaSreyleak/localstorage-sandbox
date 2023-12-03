@@ -16,29 +16,39 @@
   </head>
 
   <body>
+    <div id="alertArea" class="m-4 position-relative">
+      <div
+        class="alert alert-primary position-absolute top-0 end-0"
+        role="alert"
+      >
+        Add student successfully
+      </div>
+    </div>
+
     <div class="enroll-form m-auto my-5 p-4">
       <h3 class="text-center">Enroll Form</h3>
       <form name="f" id="myForm">
-        <label for="fullName">Full Name</label>
-        <input
-          type="text"
-          name="myName"
-          id="fullName"
-          class="form-control"
-          placeholder="Enter your full name"
-        />
+        <div class="mb-3">
+          <label for="fullName">Student name</label>
+          <input
+            name="fullName"
+            id="fullName"
+            class="form-control"
+            placeholder="Username"
+          />
+        </div>
+
         <label for="gender">Gender</label>
-        <select id="myGender" class="form-select" placeholder="Select gender">
-          <option selected>Select gender</option>
+        <select id="myGender" class="form-select">
           <option value="Female">Female</option>
           <option value="Male">Male</option>
         </select>
-        <label for="date">Date of Birth</label>
-        <input type="date" id="date" class="form-control" required />
+
+        <label for="birthDate">Date of Birth</label>
+        <input type="date" id="birthDate" class="form-control" required />
 
         <label for="place">Place of Birth</label>
-        <select id="myPlace" class="form-select">
-          <option value="" selected disabled>Select place of birth</option>
+        <select id="myPlace" class="form-select" required>
           <option value="Tboung Khmom">Tboung Khmom</option>
           <option value="Takao">Takao</option>
           <option value="Kandal">Kandal</option>
@@ -66,7 +76,6 @@
         </select>
         <label for="address">Current Address</label>
         <select id="myCurrentAddress" class="form-select">
-          <option selected>Select current address</option>
           <option value="Tuol Kouk">Tuol Kouk</option>
           <option value="Sen Sok">Sen Sok</option>
           <option value="Russey Keo">Russey Keo</option>
@@ -84,7 +93,7 @@
         </select>
         <label for="email">Email</label>
         <input
-          type="text"
+          type="email"
           name="myEmail"
           id="email"
           class="form-control"
@@ -92,35 +101,32 @@
         />
         <label for="phone">Phone Number</label>
         <input
-          type="text"
-          name="myPhone"
+          type="number"
           id="phone"
           class="form-control"
           placeholder="096 --- ---"
         />
         <label for="courses">Courses</label>
         <select id="myCourses" class="form-select">
-          <option selected>Select courses</option>
           <option value="Web Development">Web Development</option>
-          <option value="Flutter Mobile Development">
-            Flutter Mobile Development
-          </option>
+          <option value="Flutter Mobile Development">Flutter Mobile</option>
           <option value="Dot Net Development">Dot Net Development</option>
           <option value="Java Programming">Java Programming</option>
           <option value="Spring Framework">Spring Framework</option>
           <option value="React.js">React.js</option>
         </select>
         <input
+          id="submit"
           type="button"
           class="btn btn-success mt-3"
           value="Submit"
           onclick="createStudent()"
         />
-        <br /><br />
-        <p id="disPlayResult"></p>
       </form>
     </div>
+
     <script src="script.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

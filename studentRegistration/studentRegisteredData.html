@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2 class="text-center py-4">Student Registered Data</h2>
+    <table class="m-auto">
+      <thead>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>Place of Birth</th>
+        <th>Current Address</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Courses</th>
+        <th>Actions</th>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+    <div>
+      <div
+        class="modal fade"
+        id="editModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Update student infomations
+              </h1>
+
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="editForm">
+                <label for="editFullName">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editFullName"
+                  required
+                />
+                <label for="gender">Gender</label>
+                <select id="editMyGender" class="form-select">
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                </select>
+
+                <label for="editBirthDate">Date of Birth</label>
+                <input
+                  type="date"
+                  id="editBirthDate"
+                  class="form-control"
+                  required
+                />
+
+                <label for="place">Place of Birth</label>
+                <select id="editMyPlace" class="form-select" required>
+                  <option value="Tboung Khmom">Tboung Khmom</option>
+                  <option value="Takao">Takao</option>
+                  <option value="Kandal">Kandal</option>
+                  <option value="Kompong Speu">Kompong Speu</option>
+                  <option value="Kompong Chhnang">Kompong Chhnang</option>
+                  <option value="Kompong Cham">Kompong Cham</option>
+                  <option value="Kompong Thom">Kompong Thom</option>
+                  <option value="Koh Kong">Koh Kong</option>
+                  <option value="Kep">Kep</option>
+                  <option value="Kompot">Kompot</option>
+                  <option value="Kratie">Kratie</option>
+                  <option value="Modulkiri">Modulkiri</option>
+                  <option value="Oddar Meanchey">Oddar Meanchey</option>
+                  <option value="Sihanoukville">Sihanoukville</option>
+                  <option value="Stung Treng">Stung Treng</option>
+                  <option value="Siem Reap">Siem Reap</option>
+                  <option value="Svay Rieng">Svay Rieng</option>
+                  <option value="Pailin">Pailin</option>
+                  <option value="Phnom Penh">Phnom Penh</option>
+                  <option value="Prey Veng">Prey Veng</option>
+                  <option value="Pursat">Pursat</option>
+                  <option value="Ratanakiri">Ratanakiri</option>
+                  <option value="Battambong">Battambong</option>
+                  <option value="Banteay Meanchey">Banteay Meanchey</option>
+                </select>
+                <label for="address">Current Address</label>
+                <select id="editMyCurrentAddress" class="form-select">
+                  <option value="Tuol Kouk">Tuol Kouk</option>
+                  <option value="Sen Sok">Sen Sok</option>
+                  <option value="Russey Keo">Russey Keo</option>
+                  <option value="Prek Pnov">Prek Pnov</option>
+                  <option value="Prampir Makara">Prampir Makara</option>
+                  <option value="Pou Senchey">Pou Senchey</option>
+                  <option value="Mean Chey">Mean Chey</option>
+                  <option value="Komboul">Komboul</option>
+                  <option value="Daun Penh">Daun Penh</option>
+                  <option value="Dangkao">Dangkao</option>
+                  <option value="Chroy Changvar">Chroy Changvar</option>
+                  <option value="Chbar Ampov">Chbar Ampov</option>
+                  <option value="Chbar Mon">Chbar Mon</option>
+                  <option value="Boeng Keng Kong">Boeng Keng Kong</option>
+                </select>
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="myEmail"
+                  id="editEmail"
+                  class="form-control"
+                  placeholder="example@gmail.com"
+                />
+                <label for="phone">Phone Number</label>
+                <input
+                  type="number"
+                  id="editPhone"
+                  class="form-control"
+                  placeholder="096 --- ---"
+                />
+                <label for="courses">Courses</label>
+                <select id="editMyCourses" class="form-select">
+                  <option value="Web Development">Web Development</option>
+                  <option value="Flutter Mobile Development">
+                    Flutter Mobile
+                  </option>
+                  <option value="Dot Net Development">
+                    Dot Net Development
+                  </option>
+                  <option value="Java Programming">Java Programming</option>
+                  <option value="Spring Framework">Spring Framework</option>
+                  <option value="React.js">React.js</option>
+                </select>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button id="saveChange" type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function getDataFromLocalStorage() {
+        return JSON.parse(localStorage.getItem("students")) || [];
+      }
+
+      function saveStudentInfo(students) {
+        localStorage.setItem("students", JSON.stringify(students));
+      }
+
+      function displayData() {
+        const studentTable = document.getElementById("studentTable");
+        const students = getDataFromLocalStorage();
+
+        studentTable.innerHTML = "";
+
+        students.forEach((student, index) => {
+          const row = `
+              <tr>
+                 <td>${student.studentName}</td>
+                 <td>${student.gender}</td>
+                 <td>${student.date}</td>
+                 <td>${student.place}</td>
+                 <td>${student.address}</td>
+                 <td>${student.email}</td>
+                 <td>${student.phone}</td>
+                 <td>${student.course}</td>
+                 <td>
+                  <button class="btn btn-primary btn-sm" onclick="updateStudent(${index})">Edit</button>
+                  <button class="btn btn-danger btn-sm" onclick="deleteStudent(${index})">Delete</button>
+                </td>
+              </tr>
+          `;
+
+          studentTable.innerHTML += row;
+        });
+      }
+
+      function deleteStudent(index) {
+        const students = getDataFromLocalStorage();
+
+        const delStudent = students[index];
+
+        students.splice(index, 1);
+        saveStudentInfo(students);
+
+        displayData();
+
+        console.log(`Deleted : ${delStudent}`);
+      }
+      displayData();
+    </script>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
