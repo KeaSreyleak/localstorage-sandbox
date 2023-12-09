@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    transition: top 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.navbar-brand{
+    font-size: 28px;
+    font-weight: 500;
+    color: #0866FF;
+}
+.navbar-brand:hover{
+    color: #0866FF;
+}
+li{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+li .nav-link:hover{
+    color: #0866FF;
+    border-bottom: 3px solid #0866FF;
+}
+.btn-search:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    /* box-shadow: 0 0 0 1px #c7e5ff; */
+    border: none;
+}
+
+/* Course  */
+main .course-page{
+    margin-top: 40px;
+}
+.r1{
+    background-color: #ECEB98;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.c1{
+    padding: 35px;
+}
+.c1 p{
+    font-size: 25px;
+}
+.c1-btn{
+    font-size: 14px;
+    border: 2px solid #0867ffa6;
+    border-radius: 5px;
+    background-color: #ECEB98;
+}
+
+/* Enroll Form  */
+.enroll-form{
+    width: 60%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.card-title{
+    color: #55585C;
+    font-size: 18px;
+    font-weight: 600;
+}
+.card-text{
+    font-size: 17px;
+    color: #65676B;
+}
+i{
+    color: #E0900C;
+    font-size: 15px;
+}
+
+/* Student Registered */
+table, th, td{
+    color: #55585C;
+    border: 1px solid #111111;
+}
+th{
+    text-align: center;
+    background-color: rgb(188, 230, 255);
+    padding: 10px 20px;
+}
+td{
+    padding: 5px 5px;
+}
+.btn-edit{
+    color: #fff;
+    background-color: #E0900C;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0px 5px;
+}
+.btn-delete{
+    color: #fff;
+    background-color: #d5002e;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0px 5px;
+}
+/* Courses card  */
+main .col{
+    display: flex;
+    justify-content: center;
+}
+.card-img{
+    height: 179px;
+}
+.card-img img{
+    height: 100%;
+}
+.student{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.student-1{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cecece;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.student-pf{
+    display: flex;
+    align-items: center;
+}
+.student-img{
+    width: 60px;
+}
+.student-img img{
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #0866FF;
+}
+.student-name{
+    padding: 20px;
+}
+.col-3{
+    display: flex;
+    justify-content: center;
+}
+.card-r1-c1{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.r4-r2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.r4-r2-c1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.r4-r2-c1-r1{
+    width: 200px;
+    padding: 10px;
+}
+.r4-r2-c1-r1 img{
+    border-radius: 50%;
+    width: 100%;
+    border: 3px solid #0866FF;
+}
+.r4-r2-c1-r2{
+    padding: 10px;
+    text-align: center;
+}
+.r4-r2-c1-r2 h6{
+    color: #424446;
+    font-size: 18px;
+}
+.r4-r2-c1-r2 p{
+    font-size: 14px;
+    color: #666666;
+}
+footer{
+    background-color: #55585C;
+    color: #fff;
+}
+.r5 i{
+    color: #fff;
+}
+.r5-r1{
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+.r5-r1-c1 h6{
+    font-size: 28px;
+}
+.r5-r2 p{
+    border-top: 1px solid #fff;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* Our Team  */
+.team-card-pf{
+    width: 180px;
+    display: flex;
+}
+.team-card-pf img{
+    width: 100%;
+    border-radius: 50%;
+    padding:2px;
+    border: 3px solid #0866FF;
+}
+.team-card-body i{
+    font-size: 22px;
+    background-color: #e0e0e0;
+    padding: 8px;
+    border-radius: 15px;
+}
+.team-section{
+    margin-top: 75px;
+
+}
+.team-title h1{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+.team-cards{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0px;
+}
+.team-card{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0px 10px;
+    padding: 20px;
+    text-align: center;
+}
+.team-datail p{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+.team-image img{
+    border-radius: 50px;
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    margin-bottom: 10opx;
+}
+.box{
+    border: 1px solid #0866FF;
+}
+.map iframe{
+    width: 1300px;
+}
+@media only screen and (min-width: 370px) and (max-width: 600px){
+    .r5-r1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .r5-r1-c2 a{
+        text-align: center;
+    }
+    .r5-r1-c3{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 1140px){
+    .student-1{
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .r1{
+        flex-wrap: wrap;
+    }
+    .c1 p{
+        font-size: 20px;
+    }
+    .r1-r1{
+        flex-wrap: wrap;
+    }
+    .r3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 970px){
+    .student-1{
+        width: 380px;
+    }
+    .r4-r2-c1-r1{
+        width: 180px;
+        padding: 10px;
+    }
+    .r4-r2-c1-r2{
+        padding: 10px;
+        text-align: center;
+    }
+    .r4-r2-c1-r2 h6{
+        color: #424446;
+        font-size: 18px;
+    }
+    .r4-r2-c1-r2 p{
+        font-size: 14px;
+        color: #666666;
+    }
+}
+@media only screen and (max-width: 700px){
+    .c1 p{
+        font-size: 18px;
+    }
+    .c2 img{
+        width: 400px;
+    }
+    .student-1{
+        width: 400px;
+    }
+    .r4-r2-c1-r1{
+        width: 100px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .student-1{
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 378px){
+    .c1 p{
+        font-size: 15px;
+    }
+    .c2 img{
+        width: 280px;
+    }
+    /* .r4-r2-c1-r1{
+        width: 70px;
+    }
+    .r4-r2-c1-r2 h6{
+        font-size: 14px;
+    }
+    .r5-r1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .r5-r1-c2 a{
+        text-align: center;
+    }
+    .r5-r1-c3{
+        text-align: center;
+    } */
+}
+/* @media only screen and (min-width: 769px) and (max-width: 1024px) { */
+    /* .r1-course{
+        top: 68px;
+    } */
+    /* #web-development{
+        text-align: center;
+    }
+    #mobile-development{
+        text-align: center;
+    } */
+
+/* } */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .map iframe{
+        width: 740px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .navbar-brand{
+        font-size: 18px;
+    }
+    li{
+        font-size: 15px;
+    }
+    .r1 .c1 p{
+        font-size: 15px;
+    }
+    .r1 .c1 .c1-btn{
+        font-size: 13px;
+        padding: 6px;
+    }
+    .r1 .c2 img{
+        width: 200px;
+    }
+    .text-center{
+        font-size: 15px;
+        padding: 10px 0px;
+    }
+    .student-1{
+        width: 280px;
+    }
+    .r4-r2-c1-r1{
+        width: 70px;
+    }
+    .r4-r2-c1-r2 h6{
+        font-size: 14px;
+    }
+    .r5-r1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .r5-r1-c2 a{
+        text-align: center;
+    }
+    .r5-r1-c3{
+        text-align: center;
+    }
+    .r5-r1-c4{
+        text-align: center;
+    }
+    .map iframe{
+        width: 360px;
+    }
+}
