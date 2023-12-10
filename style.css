@@ -341,9 +341,6 @@ footer{
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-    .navbar-brand{
-        font-size: 18px;
-    }
     li{
         font-size: 15px;
     }
@@ -356,10 +353,6 @@ footer{
     }
     .r1 .c2 img{
         width: 200px;
-    }
-    .text-center{
-        font-size: 15px;
-        padding: 10px 0px;
     }
     .student-1{
         width: 280px;
