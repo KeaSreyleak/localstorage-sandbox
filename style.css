@@ -290,11 +290,6 @@ footer{
         text-align: center;
     }
 }
-@media only screen and (max-width: 1140px){
-    .student-1{
-        width: 450px;
-    }
-}
 @media only screen and (max-width: 1000px){
     .r1{
         flex-wrap: wrap;
@@ -349,49 +344,16 @@ footer{
     }
 }
 
-@media only screen and (max-width: 450px){
-    .student-1{
-        width: 300px;
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .map iframe{
+        width: 1000px;
     }
 }
-@media only screen and (max-width: 378px){
-    .c1 p{
-        font-size: 15px;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .map iframe{
+        width: 750px;
     }
-    .c2 img{
-        width: 280px;
-    }
-    /* .r4-r2-c1-r1{
-        width: 70px;
-    }
-    .r4-r2-c1-r2 h6{
-        font-size: 14px;
-    }
-    .r5-r1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .r5-r1-c2 a{
-        text-align: center;
-    }
-    .r5-r1-c3{
-        text-align: center;
-    } */
 }
-/* @media only screen and (min-width: 769px) and (max-width: 1024px) { */
-    /* .r1-course{
-        top: 68px;
-    } */
-    /* #web-development{
-        text-align: center;
-    }
-    #mobile-development{
-        text-align: center;
-    } */
-
-/* } */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .map iframe{
         width: 740px;
@@ -444,6 +406,6 @@ footer{
         text-align: center;
     }
     .map iframe{
-        width: 360px;
+        width: 300px;
     }
 }
