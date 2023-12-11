@@ -36,46 +36,7 @@ li .nav-link:hover{
     outline-style:solid;
     border: none;
 }
-#review-box{
-    width: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #55585C;
-    padding: 20px;
-}
-#review-text{
-    padding: 30px;
-}
-#review-pf{
-    width: 500px;
-    text-align: center;
-    padding: 10px;
-}
-#review-pf img{
-    width: 100%;
-    border-radius: 50%;
-    padding: 3px; 
-    border: 3px solid #0866FF;
-}
-#review-pf h3{
-    padding-top: 10px;
-    color: #65676B;
-}
-#review-pf p{
-    margin: 0;
-    color: #65676B;
-    padding: 10px;
-}
-#review-btn{
-    width: 40px;
-    height: 40px;
-}
 
-/* Course  */
-main .course-page{
-    margin-top: 40px;
-}
 .r1{
     background-color: #ECEB98;
     display: flex;
@@ -155,36 +116,6 @@ main .col{
 .card-img img{
     height: 100%;
 }
-.student{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.student-1{
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #cecece;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-}
-.student-pf{
-    display: flex;
-    align-items: center;
-}
-.student-img{
-    width: 60px;
-}
-.student-img img{
-    width: 100%;
-    border-radius: 50%;
-    border: 3px solid #0866FF;
-}
-.student-name{
-    padding: 20px;
-}
 .col-3{
     display: flex;
     justify-content: center;
@@ -194,6 +125,41 @@ main .col{
     align-items: center;
     padding-left: 10px;
     padding-top: 10px;
+}
+#review-box{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #55585C;
+    padding: 20px;
+}
+#review-text{
+    padding: 10px;
+}
+#review-pf{
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+}
+#review-pf img{
+    width: 100%;
+    border-radius: 50%;
+    padding: 3px; 
+    border: 3px solid #0866FF;
+}
+#review-pf h5{
+    padding-top: 10px;
+    color: #5f5f5f;
+}
+#review-pf p{
+    margin: 0;
+    color: #6f6f6f;
+    /* padding: 10px; */
+}
+#review-btn{
+    width: 40px;
+    height: 40px;
 }
 .r4-r2{
     display: flex;
@@ -250,6 +216,11 @@ footer{
     font-size: 12px;
 }
 
+/* Course  */
+main .course-page{
+    margin-top: 40px;
+}
+
 /* About Us */
 
 .about-img{
@@ -291,85 +262,27 @@ footer{
 .map iframe{
     width: 1300px;
 }
-@media only screen and (min-width: 370px) and (max-width: 600px){
-    .r5-r1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .r5-r1-c2 a{
-        text-align: center;
-    }
-    .r5-r1-c3{
-        text-align: center;
-    }
-}
-@media only screen and (max-width: 1000px){
-    .r1{
-        flex-wrap: wrap;
-    }
-    .c1 p{
-        font-size: 20px;
-    }
-    .r1-r1{
-        flex-wrap: wrap;
-    }
-    .r3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-}
-@media only screen and (max-width: 970px){
-    .student-1{
-        width: 380px;
-    }
-    .r4-r2-c1-r1{
-        width: 180px;
-        padding: 10px;
-    }
-    .r4-r2-c1-r2{
-        padding: 10px;
-        text-align: center;
-    }
-    .r4-r2-c1-r2 h6{
-        color: #424446;
-        font-size: 18px;
-    }
-    .r4-r2-c1-r2 p{
-        font-size: 14px;
-        color: #666666;
-    }
-}
-@media only screen and (max-width: 700px){
-    .c1 p{
-        font-size: 18px;
-    }
-    .c2 img{
-        width: 400px;
-    }
-    .student-1{
-        width: 400px;
-    }
-    .r4-r2-c1-r1{
-        width: 100px;
-        padding: 10px;
-    }
-}
-
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
     .map iframe{
         width: 1000px;
     }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #review-box{
+        width: 650px;
+    }
+    .r4-r2-c1-r1{
+        width: 80px;
+        padding: 10px;
+    }
     .map iframe{
         width: 750px;
     }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+    #review-box{
+        width: 400px;
+    }
     .map iframe{
         width: 740px;
     }
@@ -377,6 +290,9 @@ footer{
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     li{
         font-size: 15px;
+    }
+    .r1{
+        flex-wrap: wrap;
     }
     .r1 .c1 p{
         font-size: 15px;
@@ -388,8 +304,16 @@ footer{
     .r1 .c2 img{
         width: 200px;
     }
-    .student-1{
-        width: 280px;
+    #review-box{
+        width: 260px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #review-pf{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .r4-r2-c1-r1{
         width: 70px;

@@ -35,13 +35,13 @@ const students = [
     const i = Math.floor(Math.random() * students.length);
     document.getElementById("review-box").innerHTML =
     ` 
+    <div id="review-pf">
+    <img src="${students[i].img}" alt="studentImg">
+    <h5>${students[i].name}</h5>
+    <p>${students[i].course}</p>
+    </div>
     <div id="review-text">
-    <p>“${students[i].review}”</p>
-      </div>
-      <div id="review-pf">
-      <img src="${students[i].img}" alt="studentImg">
-      <h3>${students[i].name}</h3>
-      <p>${students[i].course}</p>
+      <p>“${students[i].review}”</p>
     </div>
     `
   });
